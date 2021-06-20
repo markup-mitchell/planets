@@ -15,6 +15,8 @@
 	--green: #1ec2a4;
 	--blue: #2d68f0;
 
+	--standard-padding: 2.4rem;
+
 	--info-text__font-size: 1.1rem;
 	--info-source__font-size: 1.2rem;
 	--h1__text: 4rem;
@@ -34,8 +36,17 @@ body {
 	background-size: cover;
 	background-color: var(--black);
 	color: var(--white);
-	padding: 2.4rem;
+	/* padding: 2.4rem; */
 	margin: 0;
+}
+
+main {
+	/* padding: 2.4rem; */
+}
+
+#panels {
+	padding-left: var(--standard-padding);
+	padding-right: var(--standard-padding);
 }
 
 h1,
@@ -103,6 +114,50 @@ h3 {
 	padding-right: 18px;
 }
 
+/* reset button styles */
+
+button {
+	display: inline-block;
+	border: none;
+	padding: 1rem 0;
+	margin: 0;
+	text-decoration: none;
+	background: transparent;
+	color: var(--light-grey);
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-align: center;
+	transition: background 250ms ease-in-out, transform 150ms ease;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	letter-spacing: 1.93px;
+	border-bottom: solid 4px transparent;
+}
+
+button:focus-visible {
+	outline: 1px solid #fff;
+	outline-offset: 4px;
+}
+
+button [role="tab"] {
+	text-decoration-color: var(--aqua);
+}
+
+[aria-selected="true"] {
+	border-bottom: solid 4px var(--aqua);
+	color: var(--white);
+}
+
+[role="tablist"] {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--light-grey);
+	padding-left: var(--standard-padding);
+	padding-right: var(--standard-padding);
+}
+
 @media (min-width: 426px) {
 	:root {
 		--h1__text: 4.8rem;
@@ -114,5 +169,8 @@ h3 {
 		--h1__text: 8rem;
 		--info-text__font-size: 1.4rem;
 		--info-source__font-size: 1.4rem;
+	}
+	button {
+		font-size: 1.2rem;
 	}
 }
