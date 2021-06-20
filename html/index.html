@@ -6,36 +6,43 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="/css/global.css">
-
+  <script src="/js/scripts.js"></script>
   <title>Frontend Mentor | Planets fact site</title>
 </head>
 <body>
-  <main>
   <h1>
 
     Mercury
   </h1>
 
   <!-- Overview Content Start -->
+  <div id="panels">
 
-  <p class="info__text">
-    Mercury is the smallest planet in the Solar System and the closest
-    to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
-    shortest of all the Sun's planets. Mercury is one of four terrestrial
-    planets in the Solar System, and is a rocky body like Earth.
-  </p>
+    <div
+    id="panel__overview"
+    role="tabpanel" tabindex="0" aria-labelledby="tab__overview"
+    >
+    <p class="info__text">
+      Mercury is the smallest planet in the Solar System and the closest
+      to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
+      shortest of all the Sun's planets. Mercury is one of four terrestrial
+      planets in the Solar System, and is a rocky body like Earth.
+    </p>
 
-  <p class="info__source">
-    Source : <a href="https://en.wikipedia.org/wiki/Mercury_(planet)">
-      <b>Wikipedia</b>
-    </a>
-  </p>
-</main>
+    <p class="info__source">
+      Source : <a href="https://en.wikipedia.org/wiki/Mercury_(planet)">
+        <b>Wikipedia</b>
+      </a>
+    </p>
+  </div>
 
   <!-- Overview Content End -->
 
   <!-- Internal Structure Content Start -->
-
+  <div
+  id="panel__structure"
+  role="tabpanel" tabindex="0" aria-labelledby="tab__structure"
+  >
   <p class="info__text">
     Mercury appears to have a solid silicate crust and mantle overlying a
     solid, iron sulfide outer core layer, a deeper liquid core layer, and
@@ -46,10 +53,14 @@
   <p class="info__source">
     Source : <a href="https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure"><b>Wikipedia</b></a>
   </p>
-
+  </div>
   <!-- Internal Structure Content End -->
 
   <!-- Surface Geology Content Start -->
+  <div
+  id="panel__geology"
+  role="tabpanel" tabindex="0" aria-labelledby="tab__geology"
+  >
   <p class="info__text">
     Mercury's surface is similar in appearance to that of the Moon, showing
     extensive mare-like plains and heavy cratering, indicating that it has
@@ -63,23 +74,47 @@
       </b>
     </a>
   </p>
+</div>
+<!-- Surface Geology Content End -->
+</div>
+<div class="tabs">
+    <div role="tablist" aria-label="Planet Facts">
+      <button
+      data-info="overview"
+      role="tab"
+      aria-selected="true" aria-controls="panel__overview" id="tab__overview" tabindex="0"
+      >
+      01 Overview
+    </button>
+    <button
+    data-info="structure"
+    role="tab"
+    aria-selected="false" aria-controls="panel__structure" id="tab__structure" tabindex="0"
+    >
+    02 Internal Structure
+  </button>
+  <button
+  data-info="geology"
+  role="tab"
+  aria-selected="false" aria-controls="panel__geology" id="tab__geology" tabindex="0"
+  >
+  03 Surface Geology
+</button>
+</div>
+</div>
 
-  <!-- Surface Geology Content End -->
+Rotation Time
+58.6 Days
 
-  <button>01 Overview</button>
-  <button>02 Internal Structure</button>
-  <button>03 Surface Geology</button>
+Revolution Time
+87.97 Days
 
-  Rotation Time
-  58.6 Days
-
-  Revolution Time
-  87.97 Days
-
-  Radius
-  2,439.7 KM
+Radius
+2,439.7 KM
 
   Average Temp.
   430°c
-</body>
+
+  </main>
+  </body>
 </html>
