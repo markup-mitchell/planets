@@ -15,7 +15,8 @@
 	--green: #1ec2a4;
 	--blue: #2d68f0;
 
-	--body__text: 1.1rem;
+	--info-text__font-size: 1.1rem;
+	--info-source__font-size: 1.2rem;
 	--h1__text: 4rem;
 }
 
@@ -33,7 +34,6 @@ body {
 	background-size: cover;
 	background-color: var(--black);
 	color: var(--white);
-	font-size: 1.4rem;
 	padding: 2.4rem;
 	margin: 0;
 }
@@ -59,6 +59,8 @@ h4 {
 h1 {
 	font-size: var(--h1__text);
 	line-height: 10.3rem;
+	text-align: center;
+	margin: 0;
 }
 
 h2 {
@@ -79,8 +81,26 @@ h3 {
 	letter-spacing: 1;
 }
 
-.overview {
+.info__text {
 	text-align: center;
+	font-size: var(--info-text__font-size);
+	margin: 0;
+}
+
+.info__source {
+	margin-top: 3.2rem;
+	text-align: center;
+}
+
+.info__source,
+.info__source a {
+	color: var(--light-grey);
+	font-size: var(--info-source__font-size);
+}
+
+.info__source a {
+	background: transparent url(/assets/icon-source.svg) center right no-repeat;
+	padding-right: 18px;
 }
 
 @media (min-width: 426px) {
@@ -92,5 +112,7 @@ h3 {
 @media (min-width: 769px) {
 	:root {
 		--h1__text: 8rem;
+		--info-text__font-size: 1.4rem;
+		--info-source__font-size: 1.4rem;
 	}
 }
