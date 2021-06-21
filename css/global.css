@@ -150,10 +150,6 @@ button:focus-visible {
 	outline-offset: 4px;
 }
 
-button [role="tab"] {
-	text-decoration-color: var(--aqua);
-}
-
 [aria-selected="true"] {
 	border-bottom: solid 4px var(--aqua);
 	color: var(--white);
@@ -200,6 +196,22 @@ button [role="tab"] {
 			"hdr tab"
 			"inf tab"
 			"dat dat";
+	}
+	button[role="tab"] {
+		padding: 0.8rem 2rem;
+		border: 1px solid var(--white);
+		text-align: left;
+	}
+
+	[aria-selected="true"] {
+		border: 0;
+		background-color: var(--aqua);
+		color: var(--white);
+	}
+	[role="tablist"] {
+		display: flex;
+		flex-direction: column;
+		border-bottom: none;
 	}
 }
 
