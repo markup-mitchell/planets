@@ -79,7 +79,6 @@ h4 {
 
 h1 {
 	font-size: var(--h1__text);
-	text-align: center;
 	margin: 0;
 }
 
@@ -165,6 +164,8 @@ button:focus-visible {
 
 .heading {
 	grid-area: hdr;
+	display: flex;
+	justify-content: center;
 }
 
 #panels {
@@ -181,12 +182,14 @@ button:focus-visible {
 	border-bottom: 1px solid var(--dark-grey);
 	padding-left: var(--standard-padding);
 	padding-right: var(--standard-padding);
+	gap: 1.6rem;
 }
 
 @media (min-width: 426px) {
 	:root {
 		--h1__text: 4.8rem;
 	}
+
 	main {
 		grid-template-rows: 20rem 46rem 6.2rem 19.4rem 8.8rem;
 		grid-template-columns: 50% 50%;
@@ -197,9 +200,20 @@ button:focus-visible {
 			"inf tab"
 			"dat dat";
 	}
+
+	.heading {
+		justify-content: start;
+		padding-left: var(--standard-padding);
+	}
+
+	.info__text,
+	.info__source {
+		text-align: left;
+	}
+
 	button[role="tab"] {
-		padding: 0.8rem 2rem;
-		border: 1px solid var(--white);
+		padding: 1.4rem 2rem;
+		border: 1px solid var(--dark-grey);
 		text-align: left;
 	}
 
@@ -208,6 +222,13 @@ button:focus-visible {
 		background-color: var(--aqua);
 		color: var(--white);
 	}
+
+	.tabs {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	[role="tablist"] {
 		display: flex;
 		flex-direction: column;
