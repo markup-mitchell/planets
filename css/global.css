@@ -54,15 +54,22 @@ body {
 
 main {
 	display: grid;
+	max-width: 1110px;
+	margin-left: auto;
+	margin-right: auto;
 	grid-template-columns: 100%;
-	grid-template-rows: 6.8rem 5rem 31rem 5.2rem 19.5rem 21.6rem;
+	grid-template-rows: 6.8rem 5rem 31rem 5.2rem 19.5rem minmax(
+			23rem,
+			max-content
+		) 5rem;
 	grid-template-areas:
 		"nav"
 		"tab"
 		"img"
 		"hdr"
 		"inf"
-		"dat";
+		"dat"
+		"mar";
 }
 
 #panels {
@@ -218,6 +225,7 @@ button:focus-visible {
 
 .datum {
 	display: flex;
+	flex-grow: 1;
 	justify-content: space-between;
 	align-items: center;
 	border: solid 1px var(--dark-grey);
@@ -226,7 +234,17 @@ button:focus-visible {
 	text-transform: uppercase;
 }
 
+.datum__term {
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+.datum__term,
 .datum__desc {
+	white-space: nowrap;
+}
+
+.datum__desc {
+	margin: 0;
 	font-family: "Antonio", sans-serif;
 	color: var(--white);
 	font-size: 2rem;
@@ -234,20 +252,22 @@ button:focus-visible {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 426px) {
+@media (min-width: 586px) {
 	:root {
 		--h1__text: 4.8rem;
+		--standard-padding: 4rem;
 	}
 
 	main {
-		grid-template-rows: 20rem 46rem 6.2rem 19.4rem 8.8rem;
+		grid-template-rows: 20rem 46rem 6.2rem 1fr max-content 5rem;
 		grid-template-columns: 50% 50%;
 		grid-template-areas:
 			"nav nav"
 			"img img"
 			"hdr tab"
 			"inf tab"
-			"dat dat";
+			"dat dat"
+			"mar mar";
 	}
 
 	.heading {
@@ -287,6 +307,20 @@ button:focus-visible {
 
 	.facts {
 		flex-direction: row;
+		gap: 1.1rem;
+	}
+
+	.datum {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.datum__desc {
+		font-size: 2.4rem;
+		margin-top: 1rem;
+	}
+	.datum__term,
+	.datum__desc {
+		line-height: 1;
 	}
 }
 
@@ -295,6 +329,9 @@ button:focus-visible {
 		--h1__text: 8rem;
 		--info-text__font-size: 1.4rem;
 		--info-source__font-size: 1.4rem;
+	}
+	.facts {
+		gap: 3rem;
 	}
 	button {
 		font-size: 1.2rem;
@@ -308,7 +345,7 @@ button:focus-visible {
 	pointer-events: none;
 }
 
-@media (min-width: 426px) {
+@media (min-width: 586px) {
 	.noMobile {
 		display: unset;
 	}
