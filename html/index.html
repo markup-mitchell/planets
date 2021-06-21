@@ -29,7 +29,7 @@
 						id="tab__overview"
 						tabindex="0"
 					>
-						Overview
+						<span class="noMobile opacity-60">01 </span>Overview
 					</button>
 					<button
 						data-info="structure"
@@ -39,7 +39,8 @@
 						id="tab__structure"
 						tabindex="0"
 					>
-						Structure
+						<span class="noMobile opacity-60">02 </span
+						><span class="noMobile">Internal </span>Structure
 					</button>
 					<button
 						data-info="geology"
@@ -49,7 +50,8 @@
 						id="tab__geology"
 						tabindex="0"
 					>
-						Surface
+						<span class="noMobile opacity-60">03 </span>Surface
+						<span class="noMobile">Geology</span>
 					</button>
 				</div>
 			</div>
@@ -132,10 +134,35 @@
 				</div>
 				<!-- Surface Geology Content End -->
 			</div>
-			.
-			<div class="facts">
-				Rotation Time 58.6 Days Revolution Time 87.97 Days Radius 2,439.7 KM
-				Average Temp. 430°c
+			<dl class="facts">
+				<div class="datum">
+          <dt>
+                    Rotation Time
+                  </dt>
+                  <dd>
+                    <span class="datum__desc">58.6 Days</span>
+                  </dd>
+        </div>
+        <div class="datum">
+          <dt>
+            Revolution Time
+          </dt>
+          <dd>
+            <span class="datum__desc">87.97 Days</span>
+          </dd>
+        </div>
+        <div class="datum">
+          <dt>
+            Radius
+          </dt>
+          <dd>
+            <span class="datum__desc">2,439.7 KM</span>
+          </dd>
+        </div>
+				<div class="datum">
+          <dt>Average</dt>
+                  <dd><span class="datum_desc"><span class="datum__desc">Temp. 430°c</span></span></dd>
+        </div>
 			</div>
 		</main>
 	</body>

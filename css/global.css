@@ -1,5 +1,16 @@
+/* 1) FONT IMPORTS */
+/* 2) CUSTOM PROPERTIES */
+/* 3) ELEMENT PROPERTIES */
+/* 4) CLASSES */
+/* 5) MEDIA QUERIES */
+/* 6) UTILITIES */
+
+/* 1) FONT IMPORTS */
+
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap");
+
+/* 2) CUSTOM PROPERTIES */
 
 :root {
 	--black: #070724;
@@ -159,6 +170,18 @@ button:focus-visible {
 }
 
 .imageDisplay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imageDisplay img {
+	max-width: 41%;
+}
+
+/* LAYOUT */
+
+.imageDisplay {
 	grid-area: img;
 }
 
@@ -184,6 +207,32 @@ button:focus-visible {
 	padding-right: var(--standard-padding);
 	gap: 1.6rem;
 }
+
+.facts {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	padding-right: var(--standard-padding);
+	padding-left: var(--standard-padding);
+}
+
+.datum {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: solid 1px var(--dark-grey);
+	padding: 1.6rem 2.4rem;
+	color: var(--light-grey);
+	text-transform: uppercase;
+}
+
+.datum__desc {
+	font-family: "Antonio", sans-serif;
+	color: var(--white);
+	font-size: 2rem;
+}
+
+/* MEDIA QUERIES */
 
 @media (min-width: 426px) {
 	:root {
@@ -215,6 +264,7 @@ button:focus-visible {
 		padding: 1.4rem 2rem;
 		border: 1px solid var(--dark-grey);
 		text-align: left;
+		color: var(--white);
 	}
 
 	[aria-selected="true"] {
@@ -234,16 +284,10 @@ button:focus-visible {
 		flex-direction: column;
 		border-bottom: none;
 	}
-}
 
-.imageDisplay {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.imageDisplay img {
-	max-width: 41%;
+	.facts {
+		flex-direction: row;
+	}
 }
 
 @media (min-width: 769px) {
@@ -255,4 +299,21 @@ button:focus-visible {
 	button {
 		font-size: 1.2rem;
 	}
+}
+
+/* UTILITIES */
+
+.noMobile {
+	display: none;
+	pointer-events: none;
+}
+
+@media (min-width: 426px) {
+	.noMobile {
+		display: unset;
+	}
+}
+
+.opacity-60 {
+	opacity: 0.6;
 }
