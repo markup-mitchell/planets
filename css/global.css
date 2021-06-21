@@ -164,6 +164,12 @@ button [role="tab"] {
 	}
 }
 
+.imageDisplay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 @media (min-width: 769px) {
 	:root {
 		--h1__text: 8rem;
