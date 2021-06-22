@@ -329,6 +329,21 @@ button:focus-visible {
 		--info-text__font-size: 1.4rem;
 		--info-source__font-size: 1.4rem;
 	}
+
+	main {
+		grid-template-rows: 8.5rem 12.6rem max-content max-content max-content 8.7rem max-content 5rem;
+		grid-template-columns: 60% 40%;
+		grid-template-areas:
+			"nav nav"
+			"img hdr"
+			"img inf"
+			"img tab"
+			"... ..."
+			"... ..."
+			"dat dat"
+			"mar mar";
+	}
+
 	.facts {
 		gap: 3rem;
 	}
