@@ -310,6 +310,11 @@ div:focus-visible {
 		color: var(--white);
 	}
 
+	button[role="tab"]:not([aria-selected="true"]):hover,
+	button[role="tab"]:not([aria-selected="true"]):focus-visible {
+		background-color: var(--dark-grey);
+	}
+
 	[aria-selected="true"] {
 		border: 0;
 		background-color: var(--theme-color);
