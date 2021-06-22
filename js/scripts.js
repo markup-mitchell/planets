@@ -2,11 +2,15 @@ window.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll('[role="tab"]');
   const tabList = document.querySelector('[role="tablist"]');
   const panelsList = document.querySelector('#panels');
+  const planetImage = document.querySelector(".planet-image");
+  const planetImageInternal = document.querySelector(".planet-image__internal");
 
   // Hide all but first tab panel
   panelsList
   .querySelectorAll('[role="tabpanel"]')
   .forEach((p,index) => index > 0 ? p.classList.add("hidden") : null);
+
+  fadeOut(planetImageInternal);
 
   // Add a click event handler to each tab
   tabs.forEach(tab => {
@@ -47,7 +51,9 @@ function changeTabs(e) {
   const panelsList = document.querySelector('#panels');
   const panel = panelsList
     .querySelector(`#panel__${target.dataset.info}`);
-
+  const planetImage = document.querySelector(".planet-image");
+  const planetImageInternal = document.querySelector(".planet-image__internal");
+  console.log(planetImageInternal)
   // Remove all current selected tabs
   parent
     .querySelectorAll('[aria-selected="true"]')
@@ -61,9 +67,28 @@ function changeTabs(e) {
     .querySelectorAll('[role="tabpanel"]')
     .forEach(p => p.classList.add("hidden"));
 
-  showSelectedPanel(panel);
+  show(panel);
+
+  if (target.id === "tab__structure") {
+    fadeIn(planetImageInternal)
+  }
+  else {
+    fadeOut(planetImageInternal)
+  }
 }
 
-function showSelectedPanel(selectedPanel) {
-  selectedPanel.classList.remove("hidden");
+function show(element) {
+  element.classList.remove("hidden");
+}
+
+function hide(element) {
+  element.classList.add("hidden");
+}
+
+function fadeOut(element) {
+  element.classList.add("invisible");
+}
+
+function fadeIn(element) {
+  element.classList.remove("invisible");
 }
