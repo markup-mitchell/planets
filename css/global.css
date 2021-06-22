@@ -40,16 +40,14 @@ html {
 }
 
 body {
-	/* width: 100%; */
 	min-height: 100vh;
-	line-height: 25px;
 	background-image: url("/assets/background-stars.svg");
 	background-size: cover;
 	background-attachment: fixed;
 	background-color: var(--black);
 	color: var(--white);
-	/* padding: 2.4rem; */
 	margin: 0;
+	overflow-x: hidden;
 }
 
 main {
@@ -59,7 +57,7 @@ main {
 	margin-right: auto;
 	grid-template-columns: 100%;
 	grid-template-rows:
-		6.8rem 5rem 31rem 5.2rem 19.5rem minmax(23rem, max-content)
+		6.8rem 5rem 31rem 5.2rem max-content minmax(23rem, max-content)
 		5rem;
 	grid-template-areas:
 		"nav"
@@ -121,6 +119,7 @@ h3 {
 	text-align: center;
 	font-size: var(--info-text__font-size);
 	margin: 2.4rem 0 0;
+	line-height: 2.5rem;
 }
 
 .info__source {
@@ -161,7 +160,9 @@ button {
 	border-bottom: solid 4px transparent;
 }
 
-button:focus-visible {
+button:focus-visible,
+a:focus-visible,
+div:focus-visible {
 	outline: 1px solid #fff;
 	outline-offset: 4px;
 }
@@ -199,6 +200,14 @@ button:focus-visible {
 
 #panels {
 	grid-area: inf;
+	display: flex;
+}
+
+[role="tabpanel"] {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
 }
 
 .facts {
@@ -298,6 +307,10 @@ button:focus-visible {
 		justify-content: center;
 	}
 
+	.tabNumber {
+		margin-right: 2.8rem;
+	}
+
 	[role="tablist"] {
 		display: flex;
 		flex-direction: column;
@@ -331,8 +344,8 @@ button:focus-visible {
 	}
 
 	main {
-		grid-template-rows: 8.5rem 12.6rem max-content max-content max-content 8.7rem max-content 5rem;
-		grid-template-columns: 60% 40%;
+		grid-template-rows: 8.5rem min-content minmax(25rem, max-content) max-content max-content 8.7rem max-content 5rem;
+		grid-template-columns: 63% 1fr;
 		grid-template-areas:
 			"nav nav"
 			"img hdr"
@@ -347,12 +360,20 @@ button:focus-visible {
 	.facts {
 		gap: 3rem;
 	}
-	button {
+	button[role="tab"] {
 		font-size: 1.2rem;
+		white-space: nowrap;
+	}
+	[role="tablist"] {
+		padding-top: 2.5rem;
 	}
 }
 
 /* UTILITIES */
+
+.hidden {
+	display: none;
+}
 
 .noMobile {
 	display: none;

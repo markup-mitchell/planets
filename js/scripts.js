@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Hide all but first tab panel
   panelsList
   .querySelectorAll('[role="tabpanel"]')
-  .forEach((p,index) => index > 0 ? p.setAttribute("hidden", true) : null);
+  .forEach((p,index) => index > 0 ? p.classList.add("hidden") : null);
 
   // Add a click event handler to each tab
   tabs.forEach(tab => {
@@ -44,7 +44,6 @@ window.addEventListener("DOMContentLoaded", () => {
 function changeTabs(e) {
   const target = e.target;
   const parent = target.parentNode;
-  const grandparent = parent.parentNode;
   const panelsList = document.querySelector('#panels');
   const panel = panelsList
     .querySelector(`#panel__${target.dataset.info}`);
@@ -60,11 +59,11 @@ function changeTabs(e) {
   // Hide all tab panels
   panelsList
     .querySelectorAll('[role="tabpanel"]')
-    .forEach(p => p.setAttribute("hidden", true));
+    .forEach(p => p.classList.add("hidden"));
 
   showSelectedPanel(panel);
 }
 
 function showSelectedPanel(selectedPanel) {
-  selectedPanel.removeAttribute("hidden");
+  selectedPanel.classList.remove("hidden");
 }
