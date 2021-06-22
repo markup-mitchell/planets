@@ -192,10 +192,11 @@ div:focus-visible {
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 	justify-items: center;
-	align-items: center;
+	align-items: start;
 }
 
-.imageDisplay img {
+.planet-image,
+.planet-image__internal {
 	transform: scale(0.38);
 	grid-row: 1;
 	grid-column: 1;
@@ -204,6 +205,13 @@ div:focus-visible {
 .planet-image__internal {
 	transition: opacity 0.3s ease-in-out;
 }
+
+.planet-image__geology {
+	grid-row: 1;
+	grid-column: 1;
+	transform: scale(0.3) translate(0, 30%);
+}
+
 /* LAYOUT */
 
 .imageDisplay {
@@ -301,8 +309,13 @@ div:focus-visible {
 		padding-left: var(--standard-padding);
 	}
 
-	.imageDisplay img {
+	.planet-image,
+	.planet-image__internal {
 		transform: scale(0.64);
+	}
+
+	.planet-image__geology {
+		transform: scale(0.4) translate(0, 50%);
 	}
 
 	.info__text,
@@ -382,10 +395,16 @@ div:focus-visible {
 			"... ..."
 			"dat dat"
 			"mar mar";
+		align-items: center;
 	}
 
-	.imageDisplay img {
+	.planet-image,
+	.planet-image__internal {
 		transform: scale(1);
+	}
+
+	.planet-image__geology {
+		transform: scale(0.5) translate(0, 65%);
 	}
 
 	.facts {
