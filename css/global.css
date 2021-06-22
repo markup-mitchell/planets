@@ -203,13 +203,14 @@ div:focus-visible {
 }
 
 .planet-image__internal {
-	transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
 }
 
 .planet-image__geology {
 	grid-row: 1;
 	grid-column: 1;
 	transform: scale(0.3) translate(0, 30%);
+	transition: opacity 0.2s ease-in-out;
 }
 
 /* LAYOUT */

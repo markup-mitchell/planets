@@ -51,9 +51,8 @@ function changeTabs(e) {
   const panelsList = document.querySelector('#panels');
   const panel = panelsList
     .querySelector(`#panel__${target.dataset.info}`);
-  const planetImage = document.querySelector(".planet-image");
   const planetImageInternal = document.querySelector(".planet-image__internal");
-  console.log(planetImageInternal)
+  const planetImageGeology = document.querySelector(".planet-image__geology");
   // Remove all current selected tabs
   parent
     .querySelectorAll('[aria-selected="true"]')
@@ -74,6 +73,13 @@ function changeTabs(e) {
   }
   else {
     fadeOut(planetImageInternal)
+  }
+
+  if (target.id === "tab__geology") {
+    fadeIn(planetImageGeology)
+  }
+  else {
+    fadeOut(planetImageGeology)
   }
 }
 
