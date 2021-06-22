@@ -54,14 +54,13 @@ body {
 
 main {
 	display: grid;
-	max-width: 1110px;
+	max-width: 1190px;
 	margin-left: auto;
 	margin-right: auto;
 	grid-template-columns: 100%;
-	grid-template-rows: 6.8rem 5rem 31rem 5.2rem 19.5rem minmax(
-			23rem,
-			max-content
-		) 5rem;
+	grid-template-rows:
+		6.8rem 5rem 31rem 5.2rem 19.5rem minmax(23rem, max-content)
+		5rem;
 	grid-template-areas:
 		"nav"
 		"tab"
@@ -121,7 +120,7 @@ h3 {
 .info__text {
 	text-align: center;
 	font-size: var(--info-text__font-size);
-	margin: 0;
+	margin: 2.4rem 0 0;
 }
 
 .info__source {
@@ -316,7 +315,7 @@ button:focus-visible {
 	}
 	.datum__desc {
 		font-size: 2.4rem;
-		margin-top: 1rem;
+		margin-top: 1.4rem;
 	}
 	.datum__term,
 	.datum__desc {
