@@ -194,7 +194,7 @@ div:focus-visible {
 }
 
 .imageDisplay img {
-	max-width: 41%;
+	transform: scale(0.38);
 }
 
 /* LAYOUT */
@@ -294,6 +294,10 @@ div:focus-visible {
 		padding-left: var(--standard-padding);
 	}
 
+	.imageDisplay img {
+		transform: scale(0.64);
+	}
+
 	.info__text,
 	.info__source {
 		text-align: left;
@@ -366,6 +370,10 @@ div:focus-visible {
 			"... ..."
 			"dat dat"
 			"mar mar";
+	}
+
+	.imageDisplay img {
+		transform: scale(1);
 	}
 
 	.facts {
