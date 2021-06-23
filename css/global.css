@@ -422,6 +422,20 @@ div:focus-visible {
 	[role="tablist"] {
 		padding-top: 2.5rem;
 	}
+
+	.datum {
+		padding: 2rem 2.4rem 2.7rem;
+	}
+
+	.datum__term {
+		font-size: 1.1rem;
+		letter-spacing: 1px;
+	}
+	.datum__desc {
+		letter-spacing: -1.5px;
+		font-size: 4rem;
+		margin-top: 1.4rem;
+	}
 }
 
 /* UTILITIES */
