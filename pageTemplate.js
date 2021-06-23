@@ -70,11 +70,11 @@ const template = (data) => `
 					src=".${data.images.internal}"
 					alt=""
 				/>
-				<!-- <img
+				<img
 					class="planet-image__geology invisible"
 					src=".${data.images.geology}"
 					alt=""
-				/> -->
+				/>
 			</div>
 
 			<!-- Overview Content Start -->

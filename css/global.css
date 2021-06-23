@@ -214,10 +214,10 @@ div:focus-visible {
 }
 
 .planet-image__geology {
-	/* grid-row: 1;
+	grid-row: 1;
 	grid-column: 1;
-	transform: scale(0.3) translate(0, 30%);
-	transition: opacity 0.2s ease-in-out; */
+	transform: scale(0.3);
+	transition: opacity 0.2s ease-in-out;
 }
 
 /* LAYOUT */
@@ -450,6 +450,6 @@ div:focus-visible {
 }
 
 .invisible {
-	opacity: 0.5;
-	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
 }
