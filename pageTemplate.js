@@ -11,14 +11,14 @@ const template = (data) => `
 			sizes="32x32"
 			href="./assets/favicon-32x32.png"
 		/>
-		<link rel="stylesheet" href="/css/global.css" />
+		<link rel="stylesheet" href="../css/global.css" />
 		<style>
 			:root {
 				--theme-color: ${data.themeColor};
         --initial-max-width: ${data.initialMaxWidth};
 			}
 		</style>
-		<script src="/js/scripts.js"></script>
+		<script src="../js/scripts.js"></script>
 		<title>Frontend Mentor | Planets fact site</title>
 	</head>
 	<body>
