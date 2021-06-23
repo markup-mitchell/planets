@@ -1,3 +1,4 @@
+const template = (data) => `
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -13,7 +14,7 @@
 		<link rel="stylesheet" href="/css/global.css" />
 		<style>
 			:root {
-				--theme-color: var(--yellow);
+				--theme-color: ${data.themeColor};
 			}
 		</style>
 		<script src="/js/scripts.js"></script>
@@ -22,7 +23,7 @@
 	<body>
 		<main>
 			<div class="heading">
-				<h1>Mercury</h1>
+				<h1>${data.name}</h1>
 			</div>
 			<div class="tabs">
 				<div role="tablist" aria-label="Planet Facts">
@@ -61,15 +62,15 @@
 				</div>
 			</div>
 			<div class="imageDisplay">
-				<img class="planet-image" src="/assets/planet-mercury.svg" alt="" />
+				<img class="planet-image" src=".${data.images.planet}" alt="" />
 				<img
 					class="planet-image__internal invisible"
-					src="/assets/planet-mercury-internal.svg"
+					src=".${data.images.internal}"
 					alt=""
 				/>
 				<!-- <img
 					class="planet-image__geology invisible"
-					src="/assets/geology-mercury.png"
+					src=".${data.images.geology}"
 					alt=""
 				/> -->
 			</div>
@@ -83,17 +84,13 @@
 					aria-labelledby="tab__overview"
 				>
 					<p class="info__text">
-						Mercury is the smallest planet in the Solar System and the closest
-						to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
-						shortest of all the Sun's planets. Mercury is one of four
-						terrestrial planets in the Solar System, and is a rocky body like
-						Earth.
+            ${data.overview.content}
 					</p>
 
 					<p class="info__source">
 						Source :
 						<a
-							href="https://en.wikipedia.org/wiki/Mercury_(planet)"
+							href="${data.overview.source}"
 							target="_blank"
 							rel="noopener"
 						>
@@ -112,17 +109,13 @@
 					aria-labelledby="tab__structure"
 				>
 					<p class="info__text">
-						Mercury appears to have a solid silicate crust and mantle overlying
-						a solid, iron sulfide outer core layer, a deeper liquid core layer,
-						and a solid inner core. The planet's density is the second highest
-						in the Solar System at 5.427 g/cm3 , only slightly less than Earth's
-						density.
+          ${data.structure.content}
 					</p>
 
 					<p class="info__source">
 						Source :
 						<a
-							href="https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure"
+							href="${data.structure.source}"
 							target="_blank"
 							rel="noopener"
 							><b>Wikipedia</b></a
@@ -139,15 +132,12 @@
 					aria-labelledby="tab__geology"
 				>
 					<p class="info__text">
-						Mercury's surface is similar in appearance to that of the Moon,
-						showing extensive mare-like plains and heavy cratering, indicating
-						that it has been geologically inactive for billions of years. It is
-						more heterogeneous than either Mars's or the Moon’s.
+          ${data.geology.content}
 					</p>
 					<p class="info__source">
 						Source :
 						<a
-							href="https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology"
+							href="${data.geology.source}"
 							target="_blank"
 							rel="noopener"
 						>
@@ -160,21 +150,24 @@
 			<dl class="facts">
 				<div class="datum">
 					<dt class="datum__term">Rotation Time</dt>
-					<dd class="datum__desc">58.6 Days</dd>
+					<dd class="datum__desc">${data.rotation}</dd>
 				</div>
 				<div class="datum">
 					<dt class="datum__term">Revolution Time</dt>
-					<dd class="datum__desc">87.97 Days</dd>
+					<dd class="datum__desc">${data.revolution}</dd>
 				</div>
 				<div class="datum">
 					<dt class="datum__term">Radius</dt>
-					<dd class="datum__desc">2,439.7 KM</dd>
+					<dd class="datum__desc">${data.radius}</dd>
 				</div>
 				<div class="datum">
 					<dt class="datum__term">Average Temp.</dt>
-					<dd class="datum__desc">430°c</dd>
+					<dd class="datum__desc">${data.temperature}</dd>
 				</div>
 			</dl>
 		</main>
 	</body>
 </html>
+`;
+
+module.exports = template;
