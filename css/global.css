@@ -192,7 +192,8 @@ div:focus-visible {
 }
 
 .imageDisplay {
-	padding: var(--standard-padding);
+	padding-left: var(--standard-padding);
+	padding-right: var(--standard-padding);
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -386,10 +387,13 @@ div:focus-visible {
 	}
 
 	main {
-		grid-template-rows: 8.5rem min-content max-content max-content max-content 8.7rem max-content 5rem;
+		grid-template-rows:
+			8.5rem max-content min-content minmax(25rem, max-content)
+			max-content max-content 8.7rem max-content 5rem;
 		grid-template-columns: 63% 1fr;
 		grid-template-areas:
 			"nav nav"
+			"img ..."
 			"img hdr"
 			"img inf"
 			"img tab"
