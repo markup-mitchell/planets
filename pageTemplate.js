@@ -15,6 +15,7 @@ const template = (data) => `
 		<style>
 			:root {
 				--theme-color: ${data.themeColor};
+        --initial-max-width: ${data.initialMaxWidth};
 			}
 		</style>
 		<script src="/js/scripts.js"></script>
@@ -62,7 +63,8 @@ const template = (data) => `
 				</div>
 			</div>
 			<div class="imageDisplay">
-				<img class="planet-image" src=".${data.images.planet}" alt="" />
+				<img
+        class="planet-image" src=".${data.images.planet}" alt="" />
 				<img
 					class="planet-image__internal invisible"
 					src=".${data.images.internal}"
