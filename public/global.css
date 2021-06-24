@@ -49,15 +49,33 @@ html {
 nav {
 	display: flex;
 	justify-content: space-between;
+	padding: 2.2rem var(--standard-padding) 2.7rem;
+	font-size: 2.8rem;
+	font-family: "Antonio", sans-serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid var(--dark-grey);
+	line-height: 1;
 }
 
 nav ul {
 	list-style: none;
 	display: flex;
+	margin: 0;
+	padding: 0.5rem 0 0;
+	align-items: center;
+	font-family: "Spartan";
+	font-weight: bold;
+	font-size: 1.1rem;
+	gap: 3.3rem;
 }
 
 nav ul li {
-	display: inline block;
+	display: inline-block;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: var(--white);
 }
 
 img {
