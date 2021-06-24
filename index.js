@@ -36,7 +36,7 @@ fs.copy('./css', `${config.outdir}`, function (err) {
 
 function createPages(planets) {
   planets.forEach(planet => {
-    const planetDir = `${config.outdir}/${planet.name}`;
+    const planetDir = `${config.outdir}/${planet.name.toLowerCase()}`;
     if (!fs.existsSync(planetDir)) {
       fs.mkdirSync(planetDir);
     }

@@ -44,6 +44,22 @@ html {
 	font-size: 10px;
 }
 
+/* NAV */
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav ul li {
+	display: inline block;
+}
+
 img {
 	max-width: 100%;
 }

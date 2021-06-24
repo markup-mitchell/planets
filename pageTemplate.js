@@ -22,6 +22,19 @@ const template = (data) => `
 		<title>Frontend Mentor | Planets fact site</title>
 	</head>
 	<body>
+  <nav>
+			The Planets
+			<ul>
+				<li><a href="/mercury">Mercury</a></li>
+				<li><a href="/venus">Venus</a></li>
+				<li><a href="/earth">Earth</a></li>
+				<li><a href="/mars">Mars</a></li>
+				<li><a href="/jupiter">Jupiter</a></li>
+				<li><a href="/saturn">Saturn</a></li>
+				<li><a href="/uranus">Uranus</a></li>
+				<li><a href="/neptune">Neputune</a></li>
+			</ul>
+		</nav>
 		<main>
 			<div class="heading">
 				<h1>${data.name}</h1>
