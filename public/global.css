@@ -217,7 +217,7 @@ div:focus-visible {
 	grid-row: 1;
 	grid-column: 1;
 	transform: scale(0.3);
-	transition: opacity 0.2s ease-in-out;
+	/* transition: opacity 0.2s ease-in-out; */
 	transform: scale(0.3) translate(0, 90%);
 }
 
@@ -461,5 +461,50 @@ div:focus-visible {
 
 .invisible {
 	opacity: 0;
-	transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.5s ease-in;
+}
+
+.popped {
+	animation-name: pop;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+.unpopped {
+	animation-name: unpop;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+}
+
+/* ANIMATION */
+
+@keyframes pop {
+	from {
+		transform: scale(0.48) translateY(90%);
+		opacity: 0;
+	}
+	20% {
+		transform: scale(0.52) translateY(90%);
+		opacity: 6;
+	}
+	to {
+		transform: scale(0.5) translateY(90%);
+		opacity: 1;
+	}
+}
+
+@keyframes unpop {
+	from {
+		transform: scale(0.5) translateY(90%);
+		opacity: 1;
+	}
+	30% {
+		transform: scale(0.55) translateY(90%);
+		opacity: 0.5;
+	}
+	to {
+		transform: scale(0.4) translateY(90%);
+		opacity: 0;
+	}
 }

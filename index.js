@@ -11,7 +11,7 @@ if (!fs.existsSync(config.outdir)) fs.mkdirSync(config.outdir);
 
 fs.copy('./js', `${config.outdir}/assets`, function (err) {
   if (err){
-      console.log('An error occured while copying the folder.')
+      console.log('An error occured while copying the assets folder.')
       return console.error(err)
   }
   console.log('Copy completed!')
@@ -28,7 +28,7 @@ fs.copy('./js', `${config.outdir}`, function (err) {
 
 fs.copy('./css', `${config.outdir}`, function (err) {
   if (err){
-      console.log('An error occured while copying js folder.')
+      console.log('An error occured while copying css folder.')
       return console.error(err)
   }
   console.log('Copy completed!')
@@ -51,3 +51,4 @@ function createPages(planets) {
 }
 
 createPages(planets);
+

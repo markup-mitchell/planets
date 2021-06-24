@@ -75,10 +75,10 @@ function changeTabs(e) {
   }
 
   if (target.id === "tab__geology") {
-    fadeIn(planetImageGeology)
+    popIn(planetImageGeology)
   }
   else {
-    fadeOut(planetImageGeology)
+    popOut(planetImageGeology);
   }
 }
 
@@ -97,3 +97,17 @@ function fadeOut(element) {
 function fadeIn(element) {
   element.classList.remove("invisible");
 }
+
+function popIn(element) {
+  element.classList.add("popped")
+  element.classList.remove("unpopped")
+}
+
+function popOut(element) {
+element.classList.remove("popped");
+element.classList.add("unpopped");
+}
+
+
+
+
