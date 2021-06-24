@@ -118,6 +118,9 @@ main {
 		"inf"
 		"dat"
 		"mar";
+	animation: fadeIn ease-in 0.3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 #panels {
@@ -540,5 +543,14 @@ div:focus-visible {
 	to {
 		transform: scale(0.4) translateY(90%);
 		opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
