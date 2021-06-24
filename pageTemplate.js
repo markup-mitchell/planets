@@ -84,7 +84,7 @@ const template = (data) => `
 					alt=""
 				/>
 				<img
-					class="planet-image__geology invisible unpopped"
+					class="planet-image__geology invisible unpopped preload"
 					src=".${data.images.geology}"
 					alt=""
 				/>

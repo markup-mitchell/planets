@@ -514,6 +514,10 @@ div:focus-visible {
 	animation-timing-function: ease-in;
 }
 
+.preload * {
+	animation: none !important;
+}
+
 /* ANIMATION */
 
 @keyframes pop {

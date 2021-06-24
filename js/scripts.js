@@ -4,6 +4,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const panelsList = document.querySelector('#panels');
   const planetImageInternal = document.querySelector(".planet-image__internal");
 
+  // remove preload class that prevents anim
+  document.querySelector(".planet-image__geology").classList.remove("preload");
+
   // Hide all but first tab panel
   panelsList
   .querySelectorAll('[role="tabpanel"]')
