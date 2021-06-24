@@ -108,10 +108,13 @@ main {
 	margin-right: auto;
 	grid-template-columns: 100%;
 	grid-template-rows:
-		6.8rem 5rem max-content 5.2rem max-content minmax(23rem, max-content)
+		5rem
+		max-content
+		5.2rem
+		max-content
+		minmax(23rem, max-content)
 		5rem;
 	grid-template-areas:
-		"nav"
 		"tab"
 		"img"
 		"hdr"
@@ -336,10 +339,15 @@ div:focus-visible {
 	}
 
 	main {
-		grid-template-rows: 20rem max-content 6.2rem 1fr max-content 5rem;
+		grid-template-rows:
+			max-content
+			6.2rem
+			1fr
+			max-content
+			5rem;
+
 		grid-template-columns: 50% 50%;
 		grid-template-areas:
-			"nav nav"
 			"img img"
 			"hdr tab"
 			"inf tab"
@@ -425,11 +433,16 @@ div:focus-visible {
 
 	main {
 		grid-template-rows:
-			8.5rem max-content min-content minmax(25rem, max-content)
-			max-content max-content 8.7rem max-content 5rem;
+			max-content
+			min-content
+			minmax(25rem, max-content)
+			max-content
+			max-content
+			8.7rem
+			max-content
+			5rem;
 		grid-template-columns: 63% 1fr;
 		grid-template-areas:
-			"nav nav"
 			"img ..."
 			"img hdr"
 			"img inf"
@@ -514,7 +527,7 @@ div:focus-visible {
 	animation-timing-function: ease-in;
 }
 
-.preload * {
+.preload {
 	animation: none !important;
 }
 
