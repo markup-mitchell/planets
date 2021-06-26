@@ -4,6 +4,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const panelsList = document.querySelector('#panels');
   const planetImageInternal = document.querySelector(".planet-image__internal");
 
+  // remove preload class that prevents anim
+  document.querySelector(".planet-image__geology").classList.remove("preload");
+
   // Hide all but first tab panel
   panelsList
   .querySelectorAll('[role="tabpanel"]')
@@ -107,6 +110,18 @@ function popOut(element) {
 element.classList.remove("popped");
 element.classList.add("unpopped");
 }
+
+function toggleMobileMenu() {
+ const mobileNav = document.querySelector(".mobile-nav");
+ console.log("bum")
+ if (mobileNav.classList.contains("hidden")) {
+   mobileNav.classList.remove("hidden")
+ }
+ else {
+   mobileNav.classList.add("hidden")
+ }
+}
+
 
 
 

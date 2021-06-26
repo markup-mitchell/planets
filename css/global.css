@@ -46,7 +46,7 @@ html {
 
 /* NAV */
 
-nav {
+.desktop-nav {
 	display: flex;
 	justify-content: space-between;
 	padding: 2.2rem var(--standard-padding) 2.7rem;
@@ -55,31 +55,50 @@ nav {
 	text-transform: uppercase;
 	border-bottom: 1px solid var(--dark-grey);
 	line-height: 1;
+	grid-row: 1;
+	align-items: center;
 }
 
-nav ul {
+.desktop-nav ul {
 	list-style: none;
-	display: flex;
+	display: none;
 	margin: 0;
 	padding: 0.5rem 0 0;
 	align-items: center;
-	font-family: "Spartan";
 	font-weight: bold;
 	font-size: 1.1rem;
 	gap: 3.3rem;
 }
 
-nav ul li {
+.desktop-nav ul li {
+	font-family: "Spartan";
 	display: inline-block;
 }
 
-nav ul li a {
+.desktop-nav ul li a {
 	text-decoration: none;
 	color: var(--white);
 }
 
-img {
-	max-width: 100%;
+.desktop-nav__menu-button {
+	margin: 0;
+	border: 0;
+}
+
+.mobile-nav {
+	background: var(--black);
+	grid-row: 1 / -1;
+	grid-column: 1;
+	/* position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	*/
+}
+
+.mobile-nav ul li {
+	display: block;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -99,6 +118,15 @@ body {
 	/* Hide scrollbar for IE, Edge and Firefox */
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+}
+
+body {
+	display: grid;
+	grid-template-rows: max-content 1fr;
+}
+
+.page-name {
+	grid-row: 1;
 }
 
 main {
@@ -338,6 +366,10 @@ div:focus-visible {
 		--max-planet-width: calc(var(--initial-max-width) * 1.65) !important;
 	}
 
+	.desktop-nav ul {
+		display: flex;
+	}
+
 	main {
 		grid-template-rows:
 			max-content
@@ -367,6 +399,10 @@ div:focus-visible {
 	.info__text,
 	.info__source {
 		text-align: left;
+	}
+
+	.desktop-nav__menu-button {
+		display: none;
 	}
 
 	button[role="tab"] {
@@ -512,6 +548,10 @@ div:focus-visible {
 .invisible {
 	opacity: 0;
 	transition: opacity 0.5s ease-in;
+}
+
+.sr-only {
+	display: none;
 }
 
 .popped {

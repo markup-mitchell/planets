@@ -22,8 +22,11 @@ const template = (data) => `
 		<title>Frontend Mentor | Planets fact site</title>
 	</head>
 	<body>
-  <nav>
+  <nav class="desktop-nav">
+  <div>
+   <h1>
   The Planets
+  </h1>
   <ul>
     <li><a href="/mercury">Mercury</a></li>
     <li><a href="/venus">Venus</a></li>
@@ -34,10 +37,20 @@ const template = (data) => `
     <li><a href="/uranus">Uranus</a></li>
     <li><a href="/neptune">Neputune</a></li>
   </ul>
+    </div>
+  <button
+	onclick="toggleMobileMenu()" class="nav__menu-button">
+					<span class="sr-only"> Menu </span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
+						<g fill="var(--dark-grey)"" fill-rule="evenodd">
+							<path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
+						</g>
+					</svg>
+				</button>
 </nav>
 		<main>
 			<div class="heading">
-				<h1>${data.name}</h1>
+				<h2>${data.name}</h2>
 			</div>
 			<div class="tabs">
 				<div role="tablist" aria-label="Planet Facts">
@@ -180,6 +193,18 @@ const template = (data) => `
 					<dd class="datum__desc">${data.temperature}</dd>
 				</div>
 			</dl>
+      <nav class="mobile-nav">
+      <ul>
+    <li><a href="/mercury">Mercury</a></li>
+    <li><a href="/venus">Venus</a></li>
+    <li><a href="/earth">Earth</a></li>
+    <li><a href="/mars">Mars</a></li>
+    <li><a href="/jupiter">Jupiter</a></li>
+    <li><a href="/saturn">Saturn</a></li>
+    <li><a href="/uranus">Uranus</a></li>
+    <li><a href="/neptune">Neputune</a></li>
+  </ul>
+      </nav>
 		</main>
 	</body>
 </html>

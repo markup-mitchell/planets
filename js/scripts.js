@@ -111,6 +111,18 @@ element.classList.remove("popped");
 element.classList.add("unpopped");
 }
 
+function toggleMobileMenu() {
+ const mobileNav = document.querySelector(".mobile-nav");
+ console.log("bum")
+ if (mobileNav.classList.contains("hidden")) {
+   mobileNav.classList.remove("hidden")
+ }
+ else {
+   mobileNav.classList.add("hidden")
+ }
+}
+
+
 
 
 
