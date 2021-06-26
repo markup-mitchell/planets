@@ -193,7 +193,7 @@ const template = (data) => `
 					<dd class="datum__desc">${data.temperature}</dd>
 				</div>
 			</dl>
-      <nav class="mobile-nav">
+      <nav class="mobile-nav hidden">
       <ul>
     <li><a href="/mercury">Mercury</a></li>
     <li><a href="/venus">Venus</a></li>
