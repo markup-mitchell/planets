@@ -28,7 +28,8 @@
 
 	--info-text__font-size: 1.1rem;
 	--info-source__font-size: 1.2rem;
-	--h1__text: 4rem;
+	--h1__text: 2.8rem;
+	--h2__text: 4rem;
 
 	/*these are over-written by page-level style tag to provide an appropriate theme color */
 	--theme-color: var(--blue);
@@ -51,12 +52,11 @@ html {
 .desktop-nav {
 	display: flex;
 	justify-content: space-between;
-	padding: 2.2rem var(--standard-padding) 2.7rem;
+	padding: 1.6rem var(--standard-padding);
 	font-size: 2.8rem;
 	font-family: "Antonio", sans-serif;
 	text-transform: uppercase;
 	border-bottom: 1px solid var(--dark-grey);
-	line-height: 1;
 	grid-row: 1;
 	align-items: center;
 }
@@ -91,12 +91,7 @@ html {
 	background: var(--black);
 	grid-row: 1 / -1;
 	grid-column: 1;
-	/* position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	*/
+	position: relative;
 }
 
 .mobile-nav ul li {
@@ -154,6 +149,7 @@ main {
 	animation: fadeIn ease-in 0.3s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
+	position: relative;
 }
 
 #panels {
@@ -171,6 +167,8 @@ h4 {
 h1,
 h2 {
 	font-family: "Antonio", sans-serif;
+	margin: 0;
+	line-height: 1;
 }
 
 body,
@@ -181,12 +179,10 @@ h4 {
 
 h1 {
 	font-size: var(--h1__text);
-	margin: 0;
 }
 
 h2 {
-	font-size: 4rem;
-	line-height: 5.2rem;
+	font-size: var(--h2__text);
 	letter-spacing: -1.5;
 }
 
@@ -194,12 +190,6 @@ h3 {
 	font-size: 1.2rem;
 	line-height: 2.5rem;
 	letter-spacing: 2.6;
-}
-
-h3 {
-	font-size: 1.1rem;
-	line-height: 2.5rem;
-	letter-spacing: 1;
 }
 
 .info__text {
@@ -286,7 +276,7 @@ div:focus-visible {
 .planet-image__geology {
 	grid-row: 1;
 	grid-column: 1;
-	/* transition: opacity 0.2s ease-in-out; */
+	transition: opacity 0.3s ease-in-out;
 	transform: scale(var(--geology-scale)) translate(0, 90%);
 }
 
@@ -362,13 +352,23 @@ div:focus-visible {
 
 @media (min-width: 586px) {
 	:root {
-		--h1__text: 4.8rem;
+		--h2__text: 4.8rem;
 		--standard-padding: 4rem;
 		--max-planet-width: calc(var(--initial-max-width) * 1.65) !important;
 	}
 
+	.desktop-nav {
+		flex-direction: column;
+		padding: 3.2rem;
+	}
+
+	.desktop-nav > div {
+		text-align: center;
+	}
+
 	.desktop-nav ul {
 		display: flex;
+		margin-top: 3.9rem;
 	}
 
 	main {
@@ -462,7 +462,7 @@ div:focus-visible {
 
 @media (min-width: 769px) {
 	:root {
-		--h1__text: 8rem;
+		--h2__text: 8rem;
 		--info-text__font-size: 1.4rem;
 		--info-source__font-size: 1.4rem;
 		--max-planet-width: calc(var(--initial-max-width) * 2.6) !important;
@@ -470,6 +470,7 @@ div:focus-visible {
 
 	main {
 		grid-template-rows:
+			12rem
 			max-content
 			min-content
 			minmax(25rem, max-content)
@@ -480,6 +481,7 @@ div:focus-visible {
 			5rem;
 		grid-template-columns: 63% 1fr;
 		grid-template-areas:
+			"... ..."
 			"img ..."
 			"img hdr"
 			"img inf"
@@ -523,6 +525,17 @@ div:focus-visible {
 		font-size: 4rem;
 		margin-top: 1.4rem;
 	}
+
+	.desktop-nav > div {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
+	}
+
+	.desktop-nav ul {
+		margin-top: 0;
+	}
 }
 
 /* UTILITIES */
@@ -548,7 +561,7 @@ div:focus-visible {
 
 .invisible {
 	opacity: 0;
-	transition: opacity 0.5s ease-in;
+	transition: opacity 0.2s ease-in;
 }
 
 .sr-only {
@@ -573,14 +586,15 @@ div:focus-visible {
 }
 
 /* ANIMATION */
+/* pop and unpop not working as I'd like, so reverting to fade transition for the purposes of putting live */
 
 @keyframes pop {
 	from {
-		transform: scale(calc(var(--geology-scale)-10%) translateY(90%));
+		transform: scale(calc(var(--geology-scale)-0.02) translateY(90%));
 		opacity: 0;
 	}
 	20% {
-		transform: scale(calc(var(--geology-scale)+10%)) translateY(90%);
+		transform: scale(calc(var(--geology-scale) 0.02%)) translateY(90%);
 		opacity: 0.6;
 	}
 	to {
@@ -595,11 +609,11 @@ div:focus-visible {
 		opacity: 1;
 	}
 	30% {
-		transform: scale(calc(var(--geology-scale)+10%)) translateY(90%);
+		transform: scale(calc(var(--geology-scale)+0.02)) translateY(90%);
 		opacity: 0.5;
 	}
 	to {
-		transform: scale(calc(var(--geology-scale)-10%)) translateY(90%);
+		transform: scale(calc(var(--geology-scale)-0.02)) translateY(90%);
 		opacity: 0;
 	}
 }

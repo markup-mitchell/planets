@@ -78,10 +78,10 @@ function changeTabs(e) {
   }
 
   if (target.id === "tab__geology") {
-    popIn(planetImageGeology)
+    fadeIn(planetImageGeology)
   }
   else {
-    popOut(planetImageGeology);
+    fadeOut(planetImageGeology);
   }
 }
 
