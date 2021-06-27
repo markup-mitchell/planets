@@ -54,7 +54,7 @@ html {
 	justify-content: space-between;
 	padding: 1.6rem var(--standard-padding);
 	font-size: 2.8rem;
-	font-family: "Antonio", sans-serif;
+	font-family: "Spartan", sans-serif;
 	text-transform: uppercase;
 	border-bottom: 1px solid var(--dark-grey);
 	grid-row: 1;
@@ -94,8 +94,24 @@ html {
 	position: relative;
 }
 
-.mobile-nav ul li {
+.mobile-nav__list {
+	padding: var(--standard-padding);
+}
+
+.mobile-nav__list a {
+	text-decoration: none;
+	color: var(--white);
+	text-transform: uppercase;
+	letter-spacing: 1.36px;
+}
+
+.mobile-nav__list-item {
 	display: block;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: "Spartan", sans-serif;
+	padding: 2rem var(--standard-padding);
+	border-bottom: solid 1px var(--dark-grey);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

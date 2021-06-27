@@ -194,15 +194,22 @@ const template = (data) => `
 				</div>
 			</dl>
       <nav class="mobile-nav hidden">
-      <ul>
-    <li><a href="/mercury">Mercury</a></li>
-    <li><a href="/venus">Venus</a></li>
-    <li><a href="/earth">Earth</a></li>
-    <li><a href="/mars">Mars</a></li>
-    <li><a href="/jupiter">Jupiter</a></li>
-    <li><a href="/saturn">Saturn</a></li>
-    <li><a href="/uranus">Uranus</a></li>
-    <li><a href="/neptune">Neputune</a></li>
+      <ul class="mobile-nav__list">
+
+			<li class="mobile-nav__list-item">
+				<a href="/mercury">
+					Mercury
+				</a>
+			</li>
+
+    <li class="mobile-nav__list-item"><a href="/venus">Venus</a></li>
+    <li class="mobile-nav__list-item"><a href="/earth">Earth</a></li>
+    <li class="mobile-nav__list-item"><a href="/mars">Mars</a></li>
+    <li class="mobile-nav__list-item"><a href="/jupiter">Jupiter</a></li>
+    <li class="mobile-nav__list-item"><a href="/saturn">Saturn</a></li>
+    <li class="mobile-nav__list-item"><a href="/uranus">Uranus</a></li>
+    <li class="mobile-nav__list-item"><a href="/neptune">Neputune</a></li>
+
   </ul>
       </nav>
 		</main>
