@@ -52,3 +52,11 @@ function createPages(planets) {
 
 createPages(planets);
 
+fs.copy(`${config.outdir}/mercury`, `${config.outdir}`, function (err) {
+  if (err){
+      console.log('An error occured while copying mercury/index.html.')
+      return console.error(err)
+  }
+  console.log('Copy completed!')
+});
+

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,47 +11,46 @@
 			sizes="32x32"
 			href="./assets/favicon-32x32.png"
 		/>
-		<link rel="stylesheet" href="./global.css" />
+		<link rel="stylesheet" href="/global.css" />
 		<style>
 			:root {
-				--theme-color: #419ebb;
-				--initial-max-width: 111px;
+				--theme-color: #419EBB;
+        --initial-max-width: 111px;
 			}
 		</style>
-		<script src="/js/scripts.js"></script>
+		<script src="/scripts.js"></script>
 		<title>Frontend Mentor | Planets fact site</title>
 	</head>
 	<body>
-		<nav class="desktop-nav">
-			<h2>
-				The Planets
-			</h2>
-			<div class="">
-				<ul class="noMobile">
-					<li><a href="/mercury">Mercury</a></li>
-					<li><a href="/venus">Venus</a></li>
-					<li><a href="/earth">Earth</a></li>
-					<li><a href="/mars">Mars</a></li>
-					<li><a href="/jupiter">Jupiter</a></li>
-					<li><a href="/saturn">Saturn</a></li>
-					<li><a href="/uranus">Uranus</a></li>
-					<li><a href="/neptune">Neputune</a></li>
-				</ul>
-				<button
-					onclick="toggleMobileMenu()"
-					class="desktop-nav__menu-button ">
+  <nav class="desktop-nav">
+  <div>
+  <h1>
+  The Planets
+  </h1>
+  <ul>
+    <li><a href="/mercury">Mercury</a></li>
+    <li><a href="/venus">Venus</a></li>
+    <li><a href="/earth">Earth</a></li>
+    <li><a href="/mars">Mars</a></li>
+    <li><a href="/jupiter">Jupiter</a></li>
+    <li><a href="/saturn">Saturn</a></li>
+    <li><a href="/uranus">Uranus</a></li>
+    <li><a href="/neptune">Neputune</a></li>
+  </ul>
+    </div>
+  <button
+	onclick="toggleMobileMenu()" class="desktop-nav__menu-button">
 					<span class="sr-only"> Menu </span>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
-						<g fill="var(--dark-grey)"" fill-rule="evenodd">
+						<g fill="var(--white)"" fill-rule="evenodd">
 							<path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
 						</g>
 					</svg>
 				</button>
-			</div>
-		</nav>
+</nav>
 		<main>
 			<div class="heading">
-				<h1>Mercury</h1>
+				<h2>Mercury</h2>
 			</div>
 			<div class="tabs">
 				<div role="tablist" aria-label="Planet Facts">
@@ -89,14 +89,15 @@
 				</div>
 			</div>
 			<div class="imageDisplay">
-				<img class="planet-image" src="../assets/planet-mercury.svg" alt="" />
+				<img
+        class="planet-image" src="../assets/planet-mercury.svg" alt="" />
 				<img
 					class="planet-image__internal invisible"
 					src="../assets/planet-mercury-internal.svg"
 					alt=""
 				/>
 				<img
-					class="planet-image__geology invisible"
+					class="planet-image__geology invisible preload"
 					src="../assets/geology-mercury.png"
 					alt=""
 				/>
@@ -111,11 +112,7 @@
 					aria-labelledby="tab__overview"
 				>
 					<p class="info__text">
-						Mercury is the smallest planet in the Solar System and the closest
-						to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
-						shortest of all the Sun's planets. Mercury is one of four
-						terrestrial planets in the Solar System, and is a rocky body like
-						Earth.
+            Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.
 					</p>
 
 					<p class="info__source">
@@ -140,11 +137,7 @@
 					aria-labelledby="tab__structure"
 				>
 					<p class="info__text">
-						Mercury appears to have a solid silicate crust and mantle overlying
-						a solid, iron sulfide outer core layer, a deeper liquid core layer,
-						and a solid inner core. The planet's density is the second highest
-						in the Solar System at 5.427 g/cm3 , only slightly less than Earth's
-						density.
+          Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density.
 					</p>
 
 					<p class="info__source">
@@ -167,10 +160,7 @@
 					aria-labelledby="tab__geology"
 				>
 					<p class="info__text">
-						Mercury's surface is similar in appearance to that of the Moon,
-						showing extensive mare-like plains and heavy cratering, indicating
-						that it has been geologically inactive for billions of years. It is
-						more heterogeneous than either Mars's or the Moon’s.
+          Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s.
 					</p>
 					<p class="info__source">
 						Source :
@@ -203,17 +193,24 @@
 					<dd class="datum__desc">430°c</dd>
 				</div>
 			</dl>
-			<nav class="mobile-nav hidden">
-				<ul>
-					<li><a href="/mercury">Mercury</a></li>
-					<li><a href="/venus">Venus</a></li>
-					<li><a href="/earth">Earth</a></li>
-					<li><a href="/mars">Mars</a></li>
-					<li><a href="/jupiter">Jupiter</a></li>
-					<li><a href="/saturn">Saturn</a></li>
-					<li><a href="/uranus">Uranus</a></li>
-					<li><a href="/neptune">Neputune</a></li>
-				</ul>
+      <nav class="mobile-nav hidden">
+      <ul class="mobile-nav__list">
+
+			<li class="mobile-nav__list-item">
+				<a href="/mercury">
+					Mercury
+				</a>
+			</li>
+
+    <li class="mobile-nav__list-item"><a href="/venus">Venus</a></li>
+    <li class="mobile-nav__list-item"><a href="/earth">Earth</a></li>
+    <li class="mobile-nav__list-item"><a href="/mars">Mars</a></li>
+    <li class="mobile-nav__list-item"><a href="/jupiter">Jupiter</a></li>
+    <li class="mobile-nav__list-item"><a href="/saturn">Saturn</a></li>
+    <li class="mobile-nav__list-item"><a href="/uranus">Uranus</a></li>
+    <li class="mobile-nav__list-item"><a href="/neptune">Neputune</a></li>
+
+  </ul>
       </nav>
 		</main>
 	</body>
